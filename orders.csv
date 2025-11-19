@@ -1,0 +1,7 @@
+order_id,customer_id,order_date,status,marketing_channel,shipping_country
+1,1,2024-03-01 09:15:00,completed,Paid Search,Netherlands
+2,2,2024-03-02 10:05:00,completed,Organic,Portugal
+3,1,2024-03-15 14:30:00,completed,Email,Netherlands
+4,3,2024-03-20 16:45:00,canceled,Paid Social,Brazil
+5,4,2024-04-05 11:20:00,completed,Organic,Germany
+6,5,2024-04-10 18:40:00,pending,Referral,France

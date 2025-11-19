@@ -1,0 +1,7 @@
+payment_id,order_id,payment_date,payment_method,amount,status
+1,1,2024-03-01 09:20:00,credit_card,104,paid
+2,2,2024-03-02 10:10:00,credit_card,199,paid
+3,3,2024-03-15 14:35:00,paypal,477,paid
+4,4,2024-03-20 16:50:00,pix,149,refunded
+5,5,2024-04-05 11:25:00,credit_card,89,paid
+6,6,2024-04-10 18:45:00,paypal,199,pending

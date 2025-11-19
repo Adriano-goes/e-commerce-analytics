@@ -1,0 +1,6 @@
+customer_id,full_name,email,country,signup_date,gender,age_group
+1,Anna de Vries,anna@example.com,Netherlands,2024-02-20,F,25-34
+2,João Silva,joao@example.com,Portugal,2024-02-22,M,25-34
+3,Maria Santos,maria@example.com,Brazil,2024-03-01,F,35-44
+4,Lukas Müller,lukas@example.com,Germany,2024-03-05,M,25-34
+5,Claire Dubois,claire@example.com,France,2024-03-10,F,18-24
