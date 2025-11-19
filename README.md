@@ -1,19 +1,48 @@
-This directory includes a few sample datasets to get you started.
+# E-commerce Analytics with SQL & Python
 
-*   `california_housing_data*.csv` is California housing data from the 1990 US
-    Census; more information is available at:
-    https://docs.google.com/document/d/e/2PACX-1vRhYtsvc5eOR2FWNCwaBiKL6suIOrxJig8LcSBbmCbyYsayia_DvPOOBlXZ4CAlQ5nlDD8kTaIDRwrN/pub
+This project simulates a small e-commerce database and uses **SQL + Python (SQLite + pandas)** to answer typical business questions from a Business Analyst point of view.
 
-*   `mnist_*.csv` is a small sample of the
-    [MNIST database](https://en.wikipedia.org/wiki/MNIST_database), which is
-    described at: http://yann.lecun.com/exdb/mnist/
+The analysis is implemented in a Google Colab notebook, but can also be run locally with any Python environment that supports SQLite.
 
-*   `anscombe.json` contains a copy of
-    [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet); it
-    was originally described in
+---
 
-    Anscombe, F. J. (1973). 'Graphs in Statistical Analysis'. American
-    Statistician. 27 (1): 17-21. JSTOR 2682899.
+## 1. Project Overview
 
-    and our copy was prepared by the
-    [vega_datasets library](https://github.com/altair-viz/vega_datasets/blob/4f67bdaad10f45e3549984e17e1b3088c731503d/vega_datasets/_data/anscombe.json).
+**Goal:**  
+Build a minimal but realistic e-commerce dataset and use SQL to analyse:
+
+- Monthly revenue
+- Revenue by marketing channel
+- Revenue by product category
+- Average Order Value (AOV)
+- Share of repeat customers (customers with 2+ completed orders)
+
+**Tech stack:**
+
+- Python (Google Colab / Jupyter)
+- SQLite (via `sqlite3`)
+- `pandas` for tabular analysis
+- `matplotlib` for quick charts
+
+---
+
+## 2. Data Model
+
+The database models a very small online store with the following tables:
+
+- `product_category` – product categories (e.g. Electronics, Home Office)
+- `product` – individual products, brands and base prices
+- `customer` – customers and basic attributes (country, gender, age group)
+- `orders` – order header (who bought, when, which marketing channel)
+- `order_item` – order lines (products, quantities and unit prices at purchase time)
+- `payment` – payment information (date, amount, method, status)
+
+High-level relationships:
+
+- One **customer** can place many **orders**
+- One **order** can contain many **order_items**
+- One **product_category** can have many **products**
+- One **product** can appear in many **order_items**
+- One **order** can have one or more **payments** (in this dataset, effectively one)
+
+---
